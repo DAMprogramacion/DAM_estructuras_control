@@ -8,16 +8,20 @@
  */
 
 
-public class SumarNnumerosV1 {
+public class SumarNnumerosBucleFOR {
 	
 	public static void main (String[] args) {
 		//variables numero, contador, suma todas de tipo int 
 		final int NUMERO = 5;
-		int contador = 0;
+		//int contador = 0; se declara dentro del bucle for
 		int suma = 0;
 		
-		while (contador <= NUMERO) 
-			suma += contador++;
+		for (int contador = 0; contador <= NUMERO; contador++ ) {
+			suma += contador;
+		}
+		
+		/*while (contador <= NUMERO) 
+			suma += contador++;*/
 		
 		System.out.println("La suma desde 0 a " + NUMERO + " vale " + suma);
 			

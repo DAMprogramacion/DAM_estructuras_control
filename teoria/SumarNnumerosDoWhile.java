@@ -13,14 +13,24 @@ public class SumarNnumerosDoWhile {
 	
 	public static void main (String[] args) {
 		//variables numero, contador, suma todas de tipo int 
-		final int numero = 5;
+		final int NUMERO = 5;
 		int contador = 0;
 		int suma = 0;
-		while (contador <= numero) {
+		
+		do {
+			suma += contador;
+			contador++;
+			System.out.println(contador);
+		} while(contador <= NUMERO);
+			
+		
+		
+		/*while (contador <= numero) {
 			suma = suma + contador;
 			contador++;
-		}
-		System.out.println("La suma desde 0 a " + numero + " vale " + suma);
+		}*/
+		
+		System.out.println("La suma desde 0 a " + NUMERO + " vale " + suma);
 			
 	}
 }

@@ -33,13 +33,25 @@ public static void mostrarDel1Al10() {
 			
 			//Cambiar  sumaPares += condicion ? cierto : falso
 			//si i es par sumamos en sumaPares, sino en sumaImpares
-			if (i % 2 == 0) {
+			/*if (i % 2 == 0) {
 				sumaPares += i;
 			} else {
 				sumaImpares += i;
-			}
+			}*/
+			sumaPares   += i % 2 == 0 ? i : 0;
+			sumaImpares += i % 2 != 0 ? i : 0;
 		}
 		System.out.printf("SUMA PARES DE 1 A %d: %d%n", aleatorio, sumaPares);
 		System.out.printf("SUMA IMPARES: 1 A %d: %d%n", aleatorio, sumaImpares);
+	}
+	public static void mostrarSumaCuadrados(int aleatorio) {
+		int contador = 1;
+		int suma = 0;
+		while ( contador <= aleatorio) {
+			suma = suma + contador * contador;
+			contador++;
+		}
+		System.out.printf("La suma de los cuadrados hasta %d vale %d%n",
+								aleatorio, suma);
 	}
 }

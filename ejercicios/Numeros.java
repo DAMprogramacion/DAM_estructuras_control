@@ -32,7 +32,10 @@ public class Numeros {
 		//mostraría SUMA DE PARES   : 2 + 4 + 6     (Mostraría 12)
 		//mostraría SUMA DE IMPARES : 1 + 3 + 5 + 7 (Mostraría 16)
 		mostrarSumaParesEImparesDe1AN(aleatorio);
-
+		System.out.println("============");
+	
+		System.out.println("Sumamos los cuadrados hasta N, ejemplo 1² + 2² + ... + N²");
+		mostrarSumaCuadrados(aleatorio);
 
 	}
 
@@ -76,6 +79,16 @@ public class Numeros {
 		}
 		System.out.printf("SUMA PARES DE 1 A %d: %d%n", aleatorio, sumaPares);
 		System.out.printf("SUMA IMPARES: 1 A %d: %d%n", aleatorio, sumaImpares);
+	}
+	public static void mostrarSumaCuadrados(int aleatorio) {
+		int contador = 1;
+		int suma = 0;
+		while ( contador <= aleatorio) {
+			suma = suma + contador * contador;
+			contador++;
+		}
+		System.out.printf("La suma de los cuadrados hasta %d vale %d%n",
+								aleatorio, suma);
 	}
 }
 

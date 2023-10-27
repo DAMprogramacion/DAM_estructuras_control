@@ -33,6 +33,10 @@ public class NumerosV1 {
 		//mostraría SUMA DE PARES   : 2 + 4 + 6     (Mostraría 12)
 		//mostraría SUMA DE IMPARES : 1 + 3 + 5 + 7 (Mostraría 16)
 		Auxiliar.mostrarSumaParesEImparesDe1AN(aleatorio);
+		System.out.println("=============");
+		
+		System.out.println("Sumamos los cuadrados hasta N, ejemplo 1² + 2² + ... + N²");
+		Auxiliar.mostrarSumaCuadrados(aleatorio);
 
 	}
 }

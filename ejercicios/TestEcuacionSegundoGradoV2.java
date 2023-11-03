@@ -1,5 +1,6 @@
 /*
  * TestEcuacionSegundoGrado.java
+ * usando métodos estáticos de la clase EcuacionSegundoGrado
  * MUESTRA CONSOLA
  *  No tiene soluciones reales 
  *  Tiene soluciones reales:
@@ -8,7 +9,7 @@
  */
 import java.util.Scanner;
 
-public class TestEcuacionSegundoGrado {
+public class TestEcuacionSegundoGradoV2 {
 	
 	public static void main (String[] args) {
 		//hay que llamar a los métodos que están definidos en EcuacionSegundoGrado.java
@@ -23,17 +24,18 @@ public class TestEcuacionSegundoGrado {
 		sc.close();
 		
 		//VERIFICAR QUE ES RESOLUBLE   b² - 4 · a · c >= 0
-		if (b * b - 4 * a * c < 0) {
+		if (EcuacionSegundoGrado.esResoluble(a, b, c)) {
 			System.out.println("No tiene soluciones reales");
 		} else {
 			System.out.println("Tiene soluciones reales");
-			double x1 = -b + Math.sqrt(b * b - 4 * a * c) / ( 2 * a); 
-			double x2 = -b - Math.sqrt(b * b - 4 * a * c) / ( 2 * a); 
+			double x1 = EcuacionSegundoGrado.calcularX1(a, b, c); 
+			double x2 = EcuacionSegundoGrado.calcularX2(a, b, c); 
 			System.out.printf("X1 = %.3f%n", x1);
 			System.out.printf("X2 = %.3f%n", x2);
-
 		}
 	}
+
+	
 }
 
 
